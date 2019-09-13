@@ -42,7 +42,7 @@ public class ReviewController {
                                    BindingResult result) {
 
         //we need to find by restaurant name as you can only review a restaurant once
-        Review existing = reviewRepo.findByRestaurantName(review.getRestauraunt());
+        Review existing = reviewRepo.findByRestaurant(review.getRestaurant());
         if (existing != null) {
             result.rejectValue("reviewName", null, "There is already a review with that name");
         }

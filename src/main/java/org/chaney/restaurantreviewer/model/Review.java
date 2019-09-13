@@ -18,7 +18,7 @@ public class Review {
     @NotBlank(message = "Review Description is mandatory")
     private String reviewDescription;
     @NotBlank(message = "Restaurant name is mandatory")
-    private String restauraunt;
+    private String restaurant;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;
@@ -27,12 +27,12 @@ public class Review {
     @JoinColumn(name="userId")
     private User user;
 
-    public String getRestauraunt() {
-        return restauraunt;
+    public String getRestaurant() {
+        return restaurant;
     }
 
-    public void setRestauraunt(String restauraunt) {
-        this.restauraunt = restauraunt;
+    public void setRestaurant(String restaurant) {
+        this.restaurant = restaurant;
     }
 
     public Long getReviewId() {
@@ -64,7 +64,7 @@ public class Review {
         return "Review{" +
                 "reviewId=" + reviewId +
                 ", description='" + reviewDescription + '\'' +
-                ", restaurant='" + restauraunt + '\'' +
+                ", restaurant='" + restaurant + '\'' +
                 ", createDateTime=" + createDateTime +
                 '}';
     }
